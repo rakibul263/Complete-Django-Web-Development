@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        h2{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: brown;">This is a Home page into First app</h1>
+    <h2>Author : {{author}}</h2>
+    <h2>Age : {{age}}</h2>
+    <h2>{{lst}}</h2>
+
+    <!-- conditional statement -->
+    {% if age >= 20 %}
+    <h2>You age Adult. and You will gate driving license</h2>
+    {% elif age >= 10 and age <= 19 %}
+    <h2>You will not get driving license</h2>
+    {% else %}
+    <h2>You are a child.</h2>
+    {% endif %}
+
+    <!-- for loop -->
+    {% for i in courses %}
+    <h3>{{i.id}}  {{i.name}} {{i.fee}}</h3>
+    {% endfor %}
+
+    <!-- template -->
+    <h3>{{lst | join:" - "}}</h3> 
+
+</body>
+</html>
